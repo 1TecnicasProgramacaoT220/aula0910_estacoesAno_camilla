@@ -29,18 +29,48 @@ public class EstacoesAno {
         mes = entrada.nextInt();
         
         //Processamento
-        if((mes == 1) || (mes == 2) || (mes == 3)){
-            if((mes == 3) && (dia >= 20)){
-                System.out.println("Outono!");
-            } else {
+        switch(mes){
+            case 1:
+            case 2:
+            case 3:
+                if((mes == 3) && (dia >= 20)){
+                    System.out.println("Outono!");   
+                } else {
+                    System.out.println("Verão!");
+                }
+                
+                break;
+            case 4:
+            case 5:
+            case 6:
+                if ((mes == 6) && (dia >= 21)){
+                    System.out.println("Inverno!");
+                } else {
+                    System.out.println("Outono!");
+                }
+                
+                break;
+            case 7:
+            case 8:
+            case 9:
+                if((mes == 9) && (dia >= 23)){
+                    System.out.println("Primavera!");
+                } else {
+                    System.out.println("Inverno!");
+                }
+                
+                break;
+            case 10:
+            case 11:
+            case 12:
+                if((mes == 12) && (dia >= 22)){
                 System.out.println("Verão!");
-            }
-        } else if ((mes == 4) || (mes == 5) || (mes == 6)){
-            System.out.println("Outono!");
-        } else if((mes == 7) || (mes == 8) || (mes == 9)){
-            System.out.println("Inverno!");
-        } else if((mes == 10) || (mes == 11) || (mes == 12)){
-            System.out.println("Primavera!");
+                } else {
+               System.out.println("Primavera!");
+                }
+                break;
+            default:
+                System.out.println("Mês " + mes + "incorreto!");
         }
     }
     
